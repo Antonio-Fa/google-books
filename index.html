@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Google Books</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <div>
+            <h2>Google Books Search</h2>
+        </div>
+
+        <!-- form containing text input, submit/search button -->
+        <form>
+            <input type="text" id="input" />
+            <input type="submit" id="submitButton" />
+        </form>
+
+        <!-- Grid of books -->
+        <div id="bookGrid">
+            <div>
+                <img />
+                <h3 id="bookTitle">Title</h3>
+                <p>Author</p>
+                <p>Desc</p>
+            </div>
+        </div>
+        <script src="./modules/books.module.js"></script>
+    </body>
+</html>

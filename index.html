@@ -8,25 +8,25 @@
         <link rel="stylesheet" href="./styles.css" />
     </head>
     <body>
-        <div>
-            <h2>Google Books Search</h2>
-        </div>
+        <header>
+            <h1>Google Books Search</h1>
+        </header>
 
         <!-- form containing text input, submit/search button -->
-        <form>
-            <input type="text" id="input" />
-            <input type="submit" id="submitButton" />
+        <form class="form" onsubmit="return false;">
+            <input type="text" class="form__text" id="input" value="" />
+            <button type="button" class="form__btn" id="submitButton">
+                Submit
+            </button>
         </form>
 
         <!-- Grid of books -->
         <div id="bookGrid">
-            <div>
-                <img />
-                <h3 id="bookTitle">Title</h3>
-                <p>Author</p>
-                <p>Desc</p>
-            </div>
+            <p class="placeholder">
+                Welcome to a simple book search. Please use the text field above
+                to make your search!
+            </p>
         </div>
-        <script src="./modules/books.module.js"></script>
+        <script type="module" src="./script.js"></script>
     </body>
 </html>

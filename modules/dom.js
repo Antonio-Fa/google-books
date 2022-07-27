@@ -17,7 +17,7 @@ export const createABookCard = (result) => {
         authorPara.classList.add("book-card__author-para");
         if (!author) {
             authorPara.innerHTML = "No author listed";
-        } else if (author === Array) {
+        } else if (Array.isArray(author)) {
             authorPara.innerHTML = author.join(", ");
         } else {
             authorPara.innerHTML = author;

@@ -3,7 +3,9 @@ export const createABookCard = (query) => {
         const title = result.volumeInfo.title;
         const author = result.volumeInfo.authors;
         const description = result.volumeInfo.description;
-        const image = result.volumeInfo.imageLinks.thumbnail;
+        const image =
+            result.volumeInfo.imageLinks?.thumbnail ??
+            "./images/noimagefound.jpg";
 
         const titleElement = document.createElement("h2");
         const descPara = document.createElement("p");

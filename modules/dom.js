@@ -50,3 +50,11 @@ export const removeBooks = () => {
         child = parentElement.lastElementChild;
     }
 };
+
+export const clearSearch = () => {
+    const defaultPara = document.createElement("p");
+    defaultPara.innerText =
+        "Welcome to a simple book search. Please use the text field above to make your search!";
+    defaultPara.classList.add("placeholder");
+    document.getElementById("bookGrid").appendChild(defaultPara);
+};

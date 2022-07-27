@@ -13,10 +13,13 @@
         </header>
 
         <!-- form containing text input, submit/search button -->
-        <form class="form" onsubmit="return false;">
+        <form class="form" onsubmit="return false;" autocomplete="off">
             <input type="text" class="form__text" id="input" value="" />
             <button type="button" class="form__btn" id="submitButton">
                 Submit
+            </button>
+            <button type="button" class="form__btn" id="clearButton">
+                Clear
             </button>
         </form>
 

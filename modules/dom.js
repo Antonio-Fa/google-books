@@ -1,5 +1,5 @@
-export const createABookCard = (result) => {
-    result.forEach(async (result) => {
+export const createABookCard = (query) => {
+    query.forEach(async (result) => {
         const title = result.volumeInfo.title;
         const author = result.volumeInfo.authors;
         const description = result.volumeInfo.description;

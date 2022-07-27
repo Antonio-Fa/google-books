@@ -1,4 +1,6 @@
 import { createABookCard } from "./dom.js";
+import { displayLoading } from "./dom.js";
+import { removeLoading } from "./dom.js";
 
 export const searchBooks = async (search) => {
     let searchInput;
@@ -11,6 +13,9 @@ export const searchBooks = async (search) => {
             searchInput = search;
         }
     }
+
+    displayLoading();
+
     const response = await fetch(
         `https://www.googleapis.com/books/v1/volumes?q=${searchInput}&maxResults=20`,
     );
@@ -19,6 +24,7 @@ export const searchBooks = async (search) => {
     const results = bookData.items;
 
     // We want to display the title of each book inside a para
+    removeLoading();
 
     createABookCard(results);
 

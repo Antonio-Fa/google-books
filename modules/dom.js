@@ -17,7 +17,7 @@ export const createABookCard = (result) => {
         authorPara.classList.add("book-card__author-para");
         if (!author) {
             authorPara.innerHTML = "No author listed";
-        } else if (author == []) {
+        } else if (author === Array) {
             authorPara.innerHTML = author.join(", ");
         } else {
             authorPara.innerHTML = author;
@@ -57,4 +57,16 @@ export const clearSearch = () => {
         "Welcome to a simple book search. Please use the text field above to make your search!";
     defaultPara.classList.add("placeholder");
     document.getElementById("bookGrid").appendChild(defaultPara);
+};
+
+const createDiv = document.createElement("div");
+createDiv.classList.add("loading");
+createDiv.classList.add("loading--display");
+
+export const displayLoading = async () => {
+    document.getElementById("bookGrid").appendChild(createDiv);
+};
+
+export const removeLoading = async () => {
+    document.getElementById("bookGrid").removeChild(createDiv);
 };
